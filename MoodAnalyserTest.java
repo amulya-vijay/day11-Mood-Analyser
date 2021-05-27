@@ -55,10 +55,24 @@ public class MoodAnalyserTest {
 		
 		}catch(MoodAnalysisException e) {
 			Assert.assertEquals(MoodAnalysisException.error_type.NULL_INPUT, e.exceptionType(null));
-			System.out.println(e.exceptionType(null)+":Enter a proper message");
+			System.out.println(e.exceptionType(null)+": Enter a proper message");
 		}
-		//compares the value of mood with "SAD" 
-
+		
+	}
+	
+	@Test
+	public void givenEmptyInputHandleException() {
+		
+		MoodAnalyser moodAnalyser = new MoodAnalyser();
+		try {
+			
+		 moodAnalyser.analyseMood(" ");
+		
+		}catch(MoodAnalysisException e) {
+			Assert.assertEquals(MoodAnalysisException.error_type.EMPTY_INPUT, e.exceptionType(" "));
+			System.out.println(e.exceptionType(" ")+": Enter a proper message");
+		}
+		
 	}
 
 }
