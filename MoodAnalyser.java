@@ -24,7 +24,7 @@ public class MoodAnalyser {
 	public String analyseMood() throws MoodAnalysisException {
 		
 		try {
-			if(message.length()==0) {
+			if(message==" ") {
 		
 				throw new MoodAnalysisException("EMPTY");
 			}
