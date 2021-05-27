@@ -16,5 +16,15 @@ public class MoodAnalyserTest {
 		Assert.assertEquals("SAD",mood); //compares the value of mood with "SAD" 
 		System.out.println(mood);
 	}
+	
+	@Test
+	public void givenAnyMessageReturnMood() {
+		
+		MoodAnalyser moodAnalyser = new MoodAnalyser(); //Object of MoodAnalyser class
+		String mood = moodAnalyser.analyseMood("Enter message here"); 
+		Assert.assertEquals("HAPPY",mood); //compares the value of mood with "SAD" 
+		System.out.println(mood);
+		
+	}
 
 }
